@@ -12,10 +12,10 @@ function App() {
   const handleExportCSV = () => {
     if (users.length === 0) return
 
-    const headers = ['Nome', 'Idade', 'Sexo', 'Tipo Sanguíneo']
+    const headers = ['Nome', 'Idade', 'Sexo', 'Tipo Sanguíneo', 'DataHoraCadastro']
     const csvRows = [
       headers.join(','),
-      ...users.map(user => `${user.name},${user.age},${user.sex},${user.bloodType}`)
+      ...users.map(user => `${user.name},${user.age},${user.sex},${user.bloodType},${user.timestamp || ''}`)
     ]
     const csvContent = csvRows.join('\n')
 

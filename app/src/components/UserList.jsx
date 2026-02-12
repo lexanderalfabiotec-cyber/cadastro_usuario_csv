@@ -18,6 +18,11 @@ function UserList({ users }) {
                     <span style={{ color: 'var(--text-muted)' }}>{user.age} anos</span>
                     <span style={{ color: 'var(--text-muted)' }}> - {user.sex}</span>
                     <span style={{ color: 'var(--text-muted)' }}> - {user.bloodType}</span>
+                    {user.timestamp && (
+                        <span style={{ color: 'var(--text-muted)', marginLeft: '1rem' }}>
+                            - {user.timestamp}
+                        </span>
+                    )}
                 </div>
             ))}
         </div>

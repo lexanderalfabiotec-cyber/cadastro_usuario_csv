@@ -21,7 +21,8 @@ function RegistrationForm({ onAddUser }) {
         }
 
         setError('')
-        onAddUser({ name, age, sex, bloodType })
+        const timestamp = new Date().toISOString();
+        onAddUser({ name, age, sex, bloodType, timestamp })
         setName('')
         setAge('')
         setSex('')
